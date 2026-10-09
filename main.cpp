@@ -16,11 +16,11 @@ public:
 		for (int i = 0; i < SIZE; i++)
 			prices[i] = (rand() % (99999 - 10000 + 1) + 10000) / 100.0;
 	}
-	Chair(int l) {
+	Chair(int l, double p[3]) {
 		prices = new double[SIZE];
 		legs = l;
 		for (int i = 0; i < SIZE; i++)
-			prices[i] = 0;
+			prices[i] = p[i];
 	}
 	
 	// setters and getters
