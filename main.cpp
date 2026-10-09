@@ -67,6 +67,7 @@ int main() {
 	
 	cout << fixed << setprecision(2);
 	
+    cout << "==== FIRST CHAIR ====\n";
 	//creating pointer to first chair object
 	Chair *chairPtr = new Chair;
 	chairPtr->setLegs(4);
@@ -77,12 +78,14 @@ int main() {
 
     double livingPrices[3] = {525.25, 434.34, 252.52};
 
+    cout << "==== LIVING CHAIR ====\n";
 	//creating dynamic chair object with constructor
-	Chair *livingChair = new Chair(3);
+	Chair *livingChair = new Chair(3, livingPrices);
 	livingChair->print();
 	delete livingChair;
 	livingChair = nullptr;
 	
+    cout << "==== CHAIR COLLECTION ====\n";
 	//creating dynamic array of chair objects
 	Chair *collection = new Chair[SIZE];
 	
